@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Carwahs Instinto</title>
+  <title>Carwah Instinto</title>
 
   <style>
     body {
@@ -13,7 +13,7 @@
       overflow-x: hidden;
     }
 
-    /* ✨ ESTRELLAS DORADAS */
+    /* ✨ ESTRELLAS */
     body::before {
       content: "";
       position: fixed;
@@ -57,7 +57,7 @@
       background: #111;
       padding: 15px;
       border-radius: 10px;
-      width: 200px;
+      width: 220px;
       box-shadow: 0 0 10px rgba(255,215,0,0.3);
     }
 
@@ -86,73 +86,66 @@
 <body>
 
 <header>
-  Caewah Instinto 
+  Carwah Instinto 🚗✨
 </header>
 
-<h2 class="glow-text">Explora nuestros productos</h2>
+<h2 class="glow-text">Elige tu tipo de lavado</h2>
 
-<!-- 🔝 PRODUCTOS SIN PRECIO -->
+<!-- 🔝 OPCIONES -->
 <div class="productos">
 
   <div class="card">
     <img src="https://via.placeholder.com/200">
-    <h3>Lavado expresss</h3>
-    <button class="neon-btn" onclick="irA('Express')">Ver Express</button>
+    <h3>Lavado Express</h3>
+    <button class="neon-btn" onclick="irA('express')">Ver Express</button>
   </div>
 
   <div class="card">
     <img src="https://via.placeholder.com/200">
     <h3>Lavado Premium</h3>
-    <button class="neon-btn" onclick="irA('Premium')">Ver Premuim</button>
+    <button class="neon-btn" onclick="irA('premium')">Ver Premium</button>
   </div>
 
 </div>
 
-<!-- 🧴 Seleccion de Lavado -->
-<section id="Premium">
-  <h2 class="glow-text">Premium</h2>
+<!-- 🚗 EXPRESS -->
+<section id="express">
+  <h2 class="glow-text">Lavado Express</h2>
 
   <div class="catalogo">
     <div class="card">
       <img src="https://via.placeholder.com/200">
-      <h3>Lavado Premium</h3>
-      <p>RD$</p>
-      <button class="neon-btn" onclick="comprar('Lavado Premium')">Comprar servicio</button>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/200">
-      <h3>Lavado Express</h3>
-      <p>RD$</p>
-      <button class="neon-btn" onclick="Servicio('Lavado Express')">Comprar Servicio</button>
+      <h3>Lavado Rápido</h3>
+      <p>RD$ 500</p>
+      <button class="neon-btn" onclick="comprar('Lavado Express')">Reservar</button>
     </div>
   </div>
 </section>
 
-<!-- ⌚ SECCIÓN RELOJES -->
-<section id="Lavado Express">
-  <h2 class="glow-text">Express</h2>
+<!-- 💎 PREMIUM -->
+<section id="premium">
+  <h2 class="glow-text">Lavado Premium</h2>
 
   <div class="catalogo">
     <div class="card">
       <img src="https://via.placeholder.com/200">
-      <h3>Lavado Express</h3>
-      <p>RD$</p>
-      <button class="neon-btn" onclick="comprar Servicio('Lavado Express')">Comprar Servicio</button>
+      <h3>Lavado Completo</h3>
+      <p>RD$ 1,200</p>
+      <button class="neon-btn" onclick="comprar('Lavado Premium')">Reservar</button>
     </div>
 
     <div class="card">
       <img src="https://via.placeholder.com/200">
-      <h3>Lavado Express</h3>
-      <p>RD$</p>
-      <button class="neon-btn" onclick="comprar Servicio('Lavado Express')">Comprar Servicio</button>
+      <h3>Lavado + Cera</h3>
+      <p>RD$ 1,800</p>
+      <button class="neon-btn" onclick="comprar('Lavado + Cera')">Reservar</button>
     </div>
   </div>
 </section>
 
 <script>
-  function comprar Servicio(producto) {
-    let mensaje = "Hola, quiero el Servicio " + producto + "Lavado";
+  function comprar(servicio) {
+    let mensaje = "Hola, quiero reservar el servicio: " + servicio + " en Carwah Instinto";
     let url = "https://wa.me/18094385474?text=" + encodeURIComponent(mensaje);
     window.open(url, "_blank");
   }
