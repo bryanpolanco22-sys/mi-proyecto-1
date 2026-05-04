@@ -4,31 +4,91 @@
   <title>Instinto Luxtic</title>
   <style>
     body {
+      margin: 0;
+      font-family: Arial;
       background-color: black;
       color: gold;
       text-align: center;
-      font-family: Arial;
     }
+
+    header {
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .productos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
     button {
+      margin-top: 10px;
       padding: 10px;
       background: gold;
       border: none;
       cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Instinto Luxtic ⌚</h1>
-  <p>Elegancia en cada segundo, aroma en cada paso</p>
+<header>
+  Instinto Luxtic ⌚
+</header>
 
-  <button onclick="mensaje()">Ver más</button>
+<p>Elegancia en cada segundo, aroma en cada paso</p>
 
-  <script>
-    function mensaje() {
-      alert("Bienvenido a Instinto Luxtic 🔥");
-    }
-  </script>
+<div class="productos">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Perfume Premium</h3>
+    <p>RD$ 2,500</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Reloj Elegante</h3>
+    <p>RD$ 3,800</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Instinto Luxtic
+</footer>
+
+<script>
+  function comprar() {
+    alert("Contáctanos por WhatsApp para comprar 🔥");
+  }
+</script>
 
 </body>
 </html>
