@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CARWAH INSTINTO</title>
+  <title>Instinto Luxtic</title>
 
   <style>
     body {
@@ -10,10 +10,10 @@
       background: black;
       color: gold;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    /* 🌟 ESTRELLAS */
+    /* ✨ ESTRELLAS DORADAS */
     body::before {
       content: "";
       position: fixed;
@@ -22,31 +22,28 @@
       background-image: radial-gradient(gold 1px, transparent 1px);
       background-size: 40px 40px;
       opacity: 0.2;
-      animation: estrellas 25s linear infinite;
+      animation: estrellas 30s linear infinite;
     }
 
     @keyframes estrellas {
       from { transform: translateY(0); }
-      to { transform: translateY(-100px); }
+      to { transform: translateY(-200px); }
     }
 
     header {
       padding: 20px;
       font-size: 28px;
       font-weight: bold;
-      z-index: 1;
       position: relative;
+      z-index: 1;
     }
 
     .glow-text {
-      font-size: 40px;
-      text-shadow: 
-        0 0 10px gold,
-        0 0 20px gold,
-        0 0 40px orange;
+      font-size: 35px;
+      text-shadow: 0 0 10px gold, 0 0 20px gold;
     }
 
-    .productos {
+    .productos, .catalogo {
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -71,27 +68,17 @@
 
     .neon-btn {
       margin-top: 10px;
-      padding: 12px;
+      padding: 10px;
       background: linear-gradient(45deg, gold, orange);
       border: none;
       cursor: pointer;
       font-weight: bold;
       border-radius: 8px;
-      box-shadow: 0 0 10px gold, 0 0 20px orange;
-      animation: glow 1.5s infinite alternate;
+      box-shadow: 0 0 10px gold;
     }
 
-    @keyframes glow {
-      from { box-shadow: 0 0 10px gold; }
-      to { box-shadow: 0 0 25px gold, 0 0 40px orange; }
-    }
-
-    footer {
-      margin-top: 20px;
-      padding: 15px;
-      font-size: 14px;
-      position: relative;
-      z-index: 1;
+    section {
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -102,29 +89,66 @@
   Instinto Luxtic ⌚
 </header>
 
-<h1 class="glow-text">Elegancia en cada segundo</h1>
+<h2 class="glow-text">Explora nuestros productos</h2>
 
+<!-- 🔝 PRODUCTOS SIN PRECIO -->
 <div class="productos">
 
   <div class="card">
     <img src="https://via.placeholder.com/200">
-    <h3>Perfume Premium</h3>
-    <p>RD$ 2,500</p>
-    <button class="neon-btn" onclick="comprar('Perfume Premium')">Comprar</button>
+    <h3>Perfumes</h3>
+    <button class="neon-btn" onclick="irA('perfumes')">Ver Perfumes</button>
   </div>
 
   <div class="card">
     <img src="https://via.placeholder.com/200">
-    <h3>Reloj Elegante</h3>
-    <p>RD$ 3,800</p>
-    <button class="neon-btn" onclick="comprar('Reloj Elegante')">Comprar</button>
+    <h3>Relojes</h3>
+    <button class="neon-btn" onclick="irA('relojes')">Ver Relojes</button>
   </div>
 
 </div>
 
-<footer>
-  © 2026 Instinto Luxtic
-</footer>
+<!-- 🧴 SECCIÓN PERFUMES -->
+<section id="perfumes">
+  <h2 class="glow-text">Perfumes</h2>
+
+  <div class="catalogo">
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Perfume Premium</h3>
+      <p>RD$ 2,500</p>
+      <button class="neon-btn" onclick="comprar('Perfume Premium')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Perfume Deluxe</h3>
+      <p>RD$ 3,000</p>
+      <button class="neon-btn" onclick="comprar('Perfume Deluxe')">Comprar</button>
+    </div>
+  </div>
+</section>
+
+<!-- ⌚ SECCIÓN RELOJES -->
+<section id="relojes">
+  <h2 class="glow-text">Relojes</h2>
+
+  <div class="catalogo">
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Reloj Elegante</h3>
+      <p>RD$ 3,800</p>
+      <button class="neon-btn" onclick="comprar('Reloj Elegante')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200">
+      <h3>Reloj Premium</h3>
+      <p>RD$ 4,500</p>
+      <button class="neon-btn" onclick="comprar('Reloj Premium')">Comprar</button>
+    </div>
+  </div>
+</section>
 
 <script>
   function comprar(producto) {
@@ -132,7 +156,13 @@
     let url = "https://wa.me/18094385474?text=" + encodeURIComponent(mensaje);
     window.open(url, "_blank");
   }
+
+  function irA(seccion) {
+    document.getElementById(seccion).scrollIntoView({ behavior: "smooth" });
+  }
 </script>
 
+</body>
+</html>
 </body>
 </html>
